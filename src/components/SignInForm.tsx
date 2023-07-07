@@ -38,7 +38,7 @@ const Signinform = () => {
             });
             const data = await response.json();
             if (response.ok) {
-                setSnackbarMessage(data.message);
+                setSnackbarMessage(`${data.user.name} logged in`);
                 setSnackbarSeverity('success');
                 setOpenSnackbar(true);
                 // Redirect to a different page or perform any other actions after successful login
